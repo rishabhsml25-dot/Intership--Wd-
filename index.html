@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusHub | Week 2 Web Development</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar container">
+            <a href="#" class="logo">Campus<span>Hub</span></a>
+
+            <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+
+            <div class="nav-links" id="navLinks">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#tools">Tools</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <button class="theme-btn" id="themeBtn">🌙 Dark</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero: HTML structure + element/class/id selectors -->
+        <section class="hero" id="home">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <p class="eyebrow">WEEK 2 • HTML + CSS + JAVASCRIPT</p>
+                    <h1 id="mainHeading">A simple website made for students.</h1>
+                    <p>
+                        CampusHub is a small responsive website that combines CSS styling,
+                        Flexbox, Grid, JavaScript, DOM manipulation and useful interactive tools.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="btn primary" href="#tools">Explore Tools</a>
+                        <button class="btn secondary" id="welcomeBtn">Say Hello</button>
+                    </div>
+                    <p id="welcomeMessage" class="message"></p>
+                </div>
+
+                <div class="hero-card">
+                    <div class="clock-box">
+                        <span>Current Time</span>
+                        <strong id="clock">00:00:00</strong>
+                    </div>
+                    <div class="stats">
+                        <div>
+                            <strong>06</strong>
+                            <span>Tasks Covered</span>
+                        </div>
+                        <div>
+                            <strong>100</strong>
+                            <span>Marks Target</span>
+                        </div>
+                        <div>
+                            <strong>100%</strong>
+                            <span>Responsive</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Task 1 + Task 2 -->
+        <section class="section" id="about">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">TASK 01 & 02</p>
+                    <h2>CSS styling and responsive layout</h2>
+                    <p>
+                        This section demonstrates colors, typography, selectors, box model,
+                        borders, Flexbox, Grid and responsive design.
+                    </p>
+                </div>
+
+                <div class="feature-grid">
+                    <article class="feature-card highlight-card">
+                        <div class="icon">🎨</div>
+                        <h3>Clean Styling</h3>
+                        <p>
+                            External CSS is used for fonts, colors, backgrounds, spacing,
+                            borders and hover effects.
+                        </p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="icon">📱</div>
+                        <h3>Responsive Design</h3>
+                        <p>
+                            Flexbox, CSS Grid and media queries make the layout comfortable
+                            on desktop, tablet and mobile screens.
+                        </p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="icon">⚡</div>
+                        <h3>JavaScript Ready</h3>
+                        <p>
+                            Buttons, forms, inputs and tools below are connected to
+                            JavaScript through the DOM.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Task 3 -->
+        <section class="section soft-section">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">TASK 03</p>
+                    <h2>JavaScript basics</h2>
+                    <p>
+                        Try the examples below for variables, data types, operators,
+                        user input, conditions, loops and functions.
+                    </p>
+                </div>
+
+                <div class="js-demo-grid">
+                    <div class="demo-box">
+                        <h3>1. Variables & Operators</h3>
+                        <p id="variableOutput">Click the button to calculate.</p>
+                        <button class="small-btn" id="variableBtn">Run Example</button>
+                    </div>
+
+                    <div class="demo-box">
+                        <h3>2. User Input & Condition</h3>
+                        <label for="ageInput">Enter your age:</label>
+                        <input type="number" id="ageInput" min="1" placeholder="e.g. 20">
+                        <button class="small-btn" id="ageBtn">Check Age</button>
+                        <p id="ageOutput" class="result"></p>
+                    </div>
+
+                    <div class="demo-box">
+                        <h3>3. Loop & Function</h3>
+                        <p id="loopOutput">A loop will generate a list here.</p>
+                        <button class="small-btn" id="loopBtn">Run Loop</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Task 4 + Task 5 -->
+        <section class="section" id="tools">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">TASK 04 & 05</p>
+                    <h2>Interactive student tools</h2>
+                    <p>
+                        These features use DOM selection, events, style changes, validation,
+                        show/hide actions and JavaScript functions.
+                    </p>
+                </div>
+
+                <div class="tools-grid">
+                    <!-- Theme -->
+                    <article class="tool-card">
+                        <div class="tool-title">
+                            <span class="tool-number">01</span>
+                            <h3>Theme Toggle</h3>
+                        </div>
+                        <p>Switch between light and dark mode using the button in the header.</p>
+                        <span class="status-pill" id="themeStatus">Light mode active</span>
+                    </article>
+
+                    <!-- Character Counter -->
+                    <article class="tool-card">
+                        <div class="tool-title">
+                            <span class="tool-number">02</span>
+                            <h3>Live Character Counter</h3>
+                        </div>
+                        <textarea id="messageInput" maxlength="120" placeholder="Write a short message..."></textarea>
+                        <div class="counter"><span id="charCount">0</span>/120 characters</div>
+                    </article>
+
+                    <!-- Calculator -->
+                    <article class="tool-card">
+                        <div class="tool-title">
+                            <span class="tool-number">03</span>
+                            <h3>Simple Calculator</h3>
+                        </div>
+                        <div class="calculator">
+                            <input type="number" id="num1" placeholder="First number">
+                            <select id="operator" aria-label="Operator">
+                                <option value="+">+</option>
+                                <option value="-">−</option>
+                                <option value="*">×</option>
+                                <option value="/">÷</option>
+                            </select>
+                            <input type="number" id="num2" placeholder="Second number">
+                            <button class="small-btn" id="calculateBtn">Calculate</button>
+                        </div>
+                        <p id="calcResult" class="result">Result: —</p>
+                    </article>
+
+                    <!-- To-do -->
+                    <article class="tool-card">
+                        <div class="tool-title">
+                            <span class="tool-number">04</span>
+                            <h3>Mini To-Do List</h3>
+                        </div>
+                        <div class="todo-input">
+                            <input type="text" id="todoInput" placeholder="Add a task">
+                            <button class="small-btn" id="addTodoBtn">Add</button>
+                        </div>
+                        <ul id="todoList" class="todo-list"></ul>
+                    </article>
+
+                    <!-- Show / Hide -->
+                    <article class="tool-card">
+                        <div class="tool-title">
+                            <span class="tool-number">05</span>
+                            <h3>Show / Hide Content</h3>
+                        </div>
+                        <button class="small-btn" id="toggleBtn">Show Tip</button>
+                        <p id="hiddenTip" class="hidden-content">
+                            Tip: Keep your HTML semantic, CSS organized and JavaScript easy to read.
+                        </p>
+                    </article>
+
+                    <!-- Form validation -->
+                    <article class="tool-card" id="contact">
+                        <div class="tool-title">
+                            <span class="tool-number">06</span>
+                            <h3>Contact Form Validation</h3>
+                        </div>
+                        <form id="contactForm" novalidate>
+                            <input type="text" id="nameInput" placeholder="Your name">
+                            <input type="email" id="emailInput" placeholder="Your email">
+                            <button type="submit" class="small-btn">Submit</button>
+                        </form>
+                        <p id="formMessage" class="result"></p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Task 6 -->
+        <section class="section project-section">
+            <div class="container project-box">
+                <div>
+                    <p class="eyebrow">TASK 06 • MINI PROJECT</p>
+                    <h2>Everything connected in one responsive website.</h2>
+                    <p>
+                        CampusHub combines HTML structure, external CSS, responsive layouts,
+                        JavaScript basics, DOM manipulation and multiple interactive features.
+                    </p>
+                </div>
+                <a href="#home" class="btn primary">Back to Top</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>© 2026 CampusHub • Web Development Week 2 Assignment</p>
+            <p>Built with HTML, CSS & JavaScript</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
