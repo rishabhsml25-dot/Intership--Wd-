@@ -8,7 +8,7 @@ This project is created for the Week 2 Web Development assignment.
 - script.js - JavaScript, DOM manipulation and interactive features
 
 ## Task Coverage
-
+<br>
 ### Task 1 - CSS Styling & Selectors
 - External CSS
 - CSS syntax
@@ -42,7 +42,7 @@ This project is created for the Week 2 Web Development assignment.
 - click/input/submit/keydown events
 - form validation
 - show/hide content
-
+<br>
 ### Task 5 - Interactive Features
 More than three features are included:
 1. Theme toggle
